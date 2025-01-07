@@ -49,6 +49,17 @@ public class ProductController {
             return new ResponseEntity<>("ERROR Adding product",HttpStatus.BAD_REQUEST);
         }
     }
+//Fetch Image
+    @GetMapping("/product/{id}/image")
+    public ResponseEntity<byte[]> getImageById(@PathVariable int id){
+        Product p=service.getProductById(id);
+        if(p!=null){
+           byte[] image= service.getImageById(id);
+           return new ResponseEntity<>(image,HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
 
 }

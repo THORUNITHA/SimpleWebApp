@@ -34,4 +34,9 @@ public class ProductService {
         product.setImageType(imageFile.getContentType());
         return repo.save(product);
     }
+
+    public byte[] getImageById(int id) {
+        Product p=repo.findById(id).get();
+        return p.getImageData();
+    }
 }
