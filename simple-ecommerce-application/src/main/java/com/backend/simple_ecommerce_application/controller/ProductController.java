@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @CrossOrigin
@@ -34,6 +36,17 @@ public class ProductController {
         }
         else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PostMapping("/product")
+    public ResponseEntity<String> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) throws IOException {
+        Product p1= service.addProduct(product,imageFile);
+        if(p1!=null){
+            return new ResponseEntity<>("Added Product Successfully",HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>("ERROR Adding product",HttpStatus.BAD_REQUEST);
         }
     }
 
