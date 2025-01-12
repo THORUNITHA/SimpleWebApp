@@ -39,7 +39,7 @@ Steps to Run:
 1. Clone the Repository:
 
 git clone <repository-url>
-cd <repository-folder>
+cd simple-ecommerce-application
 
 2. Backend Setup:
 
