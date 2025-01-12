@@ -3,6 +3,7 @@ package com.backend.simple_ecommerce_application.service;
 import com.backend.simple_ecommerce_application.model.Product;
 import com.backend.simple_ecommerce_application.repository.ProdRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -49,5 +50,9 @@ public class ProductService {
     public void deleteProduct(int id) {
         Product p1=repo.findById(id).get();
          repo.delete(p1);
+    }
+
+    public List<Product> searchProduct(String keyword) {
+        return  repo.searchProducts(keyword);
     }
 }
