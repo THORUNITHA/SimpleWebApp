@@ -1,7 +1,7 @@
-E-commerce Application
+**E-commerce Application**
 This is a simple e-commerce application built using Spring Boot, H2 Database, and Spring MVC for the backend, with React used for the frontend. The application supports basic operations for managing products, including adding, deleting, updating, and searching for products using JPQL.
 
-Features
+**Features**
 
 Add Product: Add a new product to the inventory.
 
@@ -11,19 +11,19 @@ Update Product: Update the details of an existing product.
 
 Search Product: Search for products based on certain criteria using JPQL.
 
-Backend
+**Backend**
 
-Technologies Used:
+**Technologies Used:**
 
-Spring Boot: Backend framework.
+**Spring Boot:** Backend framework.
 
-Spring Data JPA: To interact with the database.
+**Spring Data JPA:** To interact with the database.
 
-H2 Database: In-memory database for quick development and testing.
+**H2 Database:** In-memory database for quick development and testing.
 
-Spring MVC: To handle HTTP requests (GET, POST, PUT, DELETE).
+**Spring MVC:** To handle HTTP requests (GET, POST, PUT, DELETE).
 
-How to Run
+**How to Run**
 
 Prerequisites:
 
@@ -34,10 +34,11 @@ Maven
 Node.js and npm (for the React frontend)
 
 
-Steps to Run:
+**Steps to Run:**
 
 1. **Clone the Repository:**
 
+**Backend:**
 git clone https://github.com/THORUNITHA/SimpleWebApp.git
 
 cd simple-ecommerce-application
@@ -54,28 +55,25 @@ mvn clean install
 mvn spring-boot:run
 
 3.** Frontend Setup:**
+**Navigate to the frontend folder.**
+git clone https://github.com/THORUNITHA/Frondend-SimpleWebApp-React.git
 
-Navigate to the frontend folder.
+cd simple-ecommerce-react-frontend
 
-cd frontend
-
-Install dependencies.
-
+**Install dependencies.**
 npm install
 
-Start the development server.
+**Start the development server.**
 npm run dev
 
-Access the Application:
+**Access the Application:**
 
 Backend API: http://localhost:8080
 
 Frontend: http://localhost:5173
 
-Database
-
-The application uses an in-memory H2 Database. To access the database console:
-
+**Database**
+**The application uses an in-memory H2 Database. To access the database console:**
 URL: http://localhost:8080/h2-console
 
 JDBC URL: jdbc:h2:mem:testdb
