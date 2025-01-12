@@ -61,5 +61,15 @@ public class ProductController {
         }
     }
 
+    @PutMapping("/product/{id}")
+    public ResponseEntity<String> updateProduct(@PathVariable int id,@RequestPart Product product, @RequestPart MultipartFile imageFile) throws IOException {
+        Product p1= service.updateProduct(id,product,imageFile);
+        if(p1!=null){
+            return new ResponseEntity<>("Updated Product Successfully",HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>("ERROR Adding product",HttpStatus.BAD_REQUEST);
+        }
+    }
 
 }
