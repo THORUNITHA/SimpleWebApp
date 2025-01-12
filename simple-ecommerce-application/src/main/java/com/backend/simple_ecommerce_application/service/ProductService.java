@@ -8,6 +8,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class ProductService {
 
@@ -42,5 +44,10 @@ public class ProductService {
         product.setImageName(imageFile.getName());
         product.setImageType(imageFile.getContentType());
         return repo.save(product);
+    }
+
+    public void deleteProduct(int id) {
+        Product p1=repo.findById(id).get();
+         repo.delete(p1);
     }
 }
