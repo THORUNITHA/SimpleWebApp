@@ -36,23 +36,23 @@ Node.js and npm (for the React frontend)
 
 Steps to Run:
 
-1. Clone the Repository:
+1. **Clone the Repository:**
 
 git clone https://github.com/THORUNITHA/SimpleWebApp.git
 cd simple-ecommerce-application
 
-2. Backend Setup:
+2. **Backend Setup:**
 
-Navigate to the backend folder.
-cd backend
+**Navigate to the backend folder.**
+cd simple-ecommerce-application
 
-Build the project.
+**Build the project.**
 mvn clean install
 
-Run the application.
+**Run the application.**
 mvn spring-boot:run
 
-3. Frontend Setup:
+3.** Frontend Setup:**
 
 Navigate to the frontend folder.
 
@@ -69,7 +69,7 @@ Access the Application:
 
 Backend API: http://localhost:8080
 
-Frontend: [http://localhost:3000](http://localhost:5173/product/1)
+Frontend: http://localhost:5173
 
 Database
 
