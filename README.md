@@ -39,6 +39,7 @@ Steps to Run:
 1. **Clone the Repository:**
 
 git clone https://github.com/THORUNITHA/SimpleWebApp.git
+
 cd simple-ecommerce-application
 
 2. **Backend Setup:**
